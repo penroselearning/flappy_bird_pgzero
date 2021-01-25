@@ -56,6 +56,10 @@ def update_bird():
         bird.y = 200
         bird.fall = 0
 
+    if bird.fall < -3:
+        bird.image = 'bird2'
+    else:
+        bird.image = 'bird1'
 
 def on_key_down():
     bird.fall = FLAP_HEIGHT
