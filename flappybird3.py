@@ -17,6 +17,7 @@ game_status = 0
 
 GRAVITY = 0.3
 bird.fall = 0
+FLAP_HEIGHT = -6.5
 
 def draw():
     if game_status == 0:
@@ -51,6 +52,11 @@ def update_bird():
     if bird.y > HEIGHT:
         bird.y = 200
         bird.fall = 0
+
+
+def on_key_down():
+    bird.fall = FLAP_HEIGHT
+
 
 def update():
     start_game()
